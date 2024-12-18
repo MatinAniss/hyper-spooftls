@@ -30,9 +30,9 @@ log = { version = "0.4.4", optional = true }
 pki-types = { package = "rustls-pki-types", version = "1" }
 rustls-native-certs = { version = "0.8", optional = true }
 rustls-platform-verifier = { version = "0.4", optional = true }
-rustls = { version = "0.23", default-features = false }
+rustls = {  git = "https://github.com/MatinAniss/spooftls.git", rev = "23bcb0ec3f052557f3d873a82fbaf3b611f16c28", default-features = false }
 tokio = "1.0"
-tokio-rustls = { version = "0.26", default-features = false }
+tokio-rustls = { git = "https://github.com/MatinAniss/tokio-spooftls.git", rev = "49cb57953044ef2f7b409ce871cbab3676b68d5a", default-features = false }
 tower-service = "0.3"
 webpki-roots = { version = "0.26", optional = true }
 futures-util = { version = "0.3", default-features = false }
@@ -40,7 +40,7 @@ futures-util = { version = "0.3", default-features = false }
 [dev-dependencies]
 http-body-util = "0.1"
 hyper-util = { version = "0.1", default-features = false, features = ["server-auto"] }
-rustls = { version = "0.23", default-features = false, features = ["tls12"] }
+rustls = {  git = "https://github.com/MatinAniss/spooftls.git", rev = "23bcb0ec3f052557f3d873a82fbaf3b611f16c28", default-features = false, features = ["tls12"] }
 rustls-pemfile = "2"
 tokio = { version = "1.0", features = ["io-std", "macros", "net", "rt-multi-thread"] }
 
